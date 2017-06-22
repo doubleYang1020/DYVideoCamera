@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "RootTabrTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [NSThread sleepForTimeInterval:2.5];
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    [self.window makeKeyAndVisible];
+    
+    RootTabrTableViewController *Main = [[RootTabrTableViewController alloc]init];
+    
+    self.window.rootViewController = Main;
   // Override point for customization after application launch.
   return YES;
 }
