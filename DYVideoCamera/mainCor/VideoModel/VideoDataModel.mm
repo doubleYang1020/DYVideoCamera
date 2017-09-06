@@ -135,7 +135,10 @@
 
 +(void)getHomePageVideoDataWithBlock:(void (^)(NSArray* dateAry, NSError* error))block
 {
-    NSString *apiString = @"https://api.huoshan.com/hotsoon/feed/?type=video&iid=8257698093&os_version=9.3.2&os_api=18&app_name=live_stream_pro&channel=App%20Store&device_platform=iphone&idfa=B265DA9C-569C-4B55-BE8E-3D2EC5310A7A&live_sdk_version=1.7.3&vid=AD78E6CD-4827-4D52-932A-3E74AD30F5CB&openudid=82d61456516d047fbdb667fea5ceb6d87be15bfc&device_type=iPhone8,2&version_code=1.7.3&ac=WIFI&screen_width=1242&device_id=35199776125&aid=1115&action=refresh&live_source=live_small_picture";
+  //    NSString *apiString = @"https://api.huoshan.com/hotsoon/feed/?type=video&iid=8257698093&os_version=9.3.2&os_api=18&app_name=live_stream_pro&channel=App%20Store&device_platform=iphone&idfa=B265DA9C-569C-4B55-BE8E-3D2EC5310A7A&live_sdk_version=1.7.3&vid=AD78E6CD-4827-4D52-932A-3E74AD30F5CB&openudid=82d61456516d047fbdb667fea5ceb6d87be15bfc&device_type=iPhone8,2&version_code=1.7.3&ac=WIFI&screen_width=1242&device_id=35199776125&aid=1115&action=refresh&live_source=live_small_picture";
+  
+  
+  NSString *apiString = @"https://api.huoshan.com/hotsoon/feed/?type=video&iid=8257698093&os_version=9.3.2&os_api=18&app_name=live_stream_pro&channel=App%20Store&device_platform=iphone&idfa=B265DA9C-569C-4B55-BE8E-3D2EC5310A7A&live_sdk_version=1.7.3&vid=AD78E6CD-4827-4D52-932A-3E74AD30F5CB&openudid=82d61456516d047fbdb667fea5ceb6d87be15bfc&device_type=iPhone8,2&version_code=2.2.1&ac=WIFI&screen_width=1242&device_id=35199776125&aid=1115&action=refresh&live_source=live_small_picture";
   
     AFHTTPSessionManager* afManager = [AFHTTPSessionManager manager];
     afManager.requestSerializer.timeoutInterval = 30;
