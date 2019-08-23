@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DYVideoCamera'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of DYVideoCamera.'
+  s.version          = '1.1.0'
+  s.summary          = 'A iOS Camera FrameWork.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -24,11 +24,11 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/doubleYang1020/DYVideoCamera'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'doubleYang1020' => 'huyangyang@videopls.com' }
+  s.author           = { 'doubleYang1020' => 'cn_huyangyang@163.com' }
   s.source           = { :git => 'https://github.com/doubleYang1020/DYVideoCamera.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'DYVideoCamera/Classes/**/*'
   
