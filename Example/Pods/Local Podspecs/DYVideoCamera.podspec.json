@@ -1,0 +1,22 @@
+{
+  "name": "DYVideoCamera",
+  "version": "0.1.0",
+  "summary": "A short description of DYVideoCamera.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/doubleYang1020/DYVideoCamera",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "doubleYang1020": "huyangyang@videopls.com"
+  },
+  "source": {
+    "git": "https://github.com/doubleYang1020/DYVideoCamera.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "DYVideoCamera/Classes/**/*"
+}
