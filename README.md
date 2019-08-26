@@ -22,7 +22,7 @@ pod 'DYVideoCamera'
 
 ## Author
 
-doubleYang1020, huyangyang@videopls.com
+doubleYang1020, cn_huyangyang@163.com
 
 ## License
 
