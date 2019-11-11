@@ -2082,7 +2082,7 @@
 				TargetAttributes = {
 					F2A9246F1EF90891007B849C = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 8R5WWLC62F;
+						DevelopmentTeam = NH3828744P;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -2092,6 +2092,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -2701,7 +2702,7 @@
 			baseConfigurationReference = C262AB57C093B9089C0E2AF6 /* Pods-DYVideoCamera.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8R5WWLC62F;
+				DEVELOPMENT_TEAM = NH3828744P;
 				INFOPLIST_FILE = DYVideoCamera/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2715,7 +2716,7 @@
 			baseConfigurationReference = FCD7DC4B399CC0828829D274 /* Pods-DYVideoCamera.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8R5WWLC62F;
+				DEVELOPMENT_TEAM = NH3828744P;
 				INFOPLIST_FILE = DYVideoCamera/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
