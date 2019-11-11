@@ -1,7 +1,7 @@
 {
   "name": "DYVideoCamera",
-  "version": "0.1.0",
-  "summary": "A short description of DYVideoCamera.",
+  "version": "1.1.1",
+  "summary": "A iOS Camera FrameWork.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/doubleYang1020/DYVideoCamera",
   "license": {
@@ -9,14 +9,23 @@
     "file": "LICENSE"
   },
   "authors": {
-    "doubleYang1020": "huyangyang@videopls.com"
+    "doubleYang1020": "cn_huyangyang@163.com"
   },
   "source": {
     "git": "https://github.com/doubleYang1020/DYVideoCamera.git",
-    "tag": "0.1.0"
+    "tag": "1.1.1"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "DYVideoCamera/Classes/**/*"
+  "source_files": "DYVideoCamera/Classes/**/*",
+  "public_header_files": "Pod/Classes/**/*.h",
+  "dependencies": {
+    "Masonry": [
+
+    ],
+    "GPUImage": [
+
+    ]
+  }
 }

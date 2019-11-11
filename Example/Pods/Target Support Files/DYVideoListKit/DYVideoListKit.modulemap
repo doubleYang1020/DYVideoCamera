@@ -1,0 +1,6 @@
+framework module DYVideoListKit {
+  umbrella header "DYVideoListKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -8,8 +8,11 @@
 
 #import "DYViewController.h"
 
+#import "VideoListDelegate.h"
+#import "DYVideoListKit.h"
+#import "DYSingleObject.h"
 @interface DYViewController ()
-
+@property (strong, nonatomic) id<DYVideoListDelegate> videoModuleDataSource;
 @end
 
 @implementation DYViewController
@@ -17,7 +20,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    self.videoModuleDataSource = [[VideoListDelegate alloc] init];
+    [DYSingleObject sharedInstance].videoModelDataSource = self.videoModuleDataSource;
+    [DYVideoListKit showClassName];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -25,5 +32,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
 
 @end

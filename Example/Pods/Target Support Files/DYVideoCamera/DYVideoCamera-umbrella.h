@@ -10,6 +10,10 @@
 #endif
 #endif
 
+#import "testViewController.h"
+#import "DYSingleObject.h"
+#import "DYVideoListDelegate.h"
+#import "DYVideoListView.h"
 
 FOUNDATION_EXPORT double DYVideoCameraVersionNumber;
 FOUNDATION_EXPORT const unsigned char DYVideoCameraVersionString[];

@@ -9,32 +9,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Expecta+Snapshots.xcscheme</key>
+		<key>DYVideoListKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Expecta.xcscheme</key>
+		<key>GPUImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FBSnapshotTestCase.xcscheme</key>
+		<key>Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-DYVideoCamera_Example.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-DYVideoCamera_Tests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Specta.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

@@ -6,7 +6,7 @@
 //  Copyright (c) 2019 doubleYang1020. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface DYViewController : UIViewController
 

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F91896641CF0B3D848380B7 /* Pods_DYVideoCamera_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B95FD13B7EA5A5EE0D84455 /* Pods_DYVideoCamera_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -23,6 +22,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B62DBEED237152730067E077 /* VideoListDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B62DBEEC237152730067E077 /* VideoListDelegate.m */; };
 		C69E9635A35FD19908AF8245 /* Pods_DYVideoCamera_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87350A8897B725FEC48EFCF9 /* Pods_DYVideoCamera_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,8 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B95FD13B7EA5A5EE0D84455 /* Pods_DYVideoCamera_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYVideoCamera_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DB3CCA14820612BDEE6182A /* Pods-DYVideoCamera_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYVideoCamera_Tests.release.xcconfig"; path = "Target Support Files/Pods-DYVideoCamera_Tests/Pods-DYVideoCamera_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3E69CCF4512FE1A956A5708F /* Pods-DYVideoCamera_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYVideoCamera_Example.debug.xcconfig"; path = "Target Support Files/Pods-DYVideoCamera_Example/Pods-DYVideoCamera_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* DYVideoCamera_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYVideoCamera_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -59,14 +57,15 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6DF374087DB5A6D2A7B1C03B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		6DF374087DB5A6D2A7B1C03B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7D31E250AB7E236040B35816 /* Pods-DYVideoCamera_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYVideoCamera_Tests.debug.xcconfig"; path = "Target Support Files/Pods-DYVideoCamera_Tests/Pods-DYVideoCamera_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		87350A8897B725FEC48EFCF9 /* Pods_DYVideoCamera_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYVideoCamera_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AC97D56C6F1EE2672A12125E /* DYVideoCamera.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = DYVideoCamera.podspec; path = ../DYVideoCamera.podspec; sourceTree = "<group>"; };
+		AC97D56C6F1EE2672A12125E /* DYVideoCamera.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DYVideoCamera.podspec; path = ../DYVideoCamera.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B62DBEEB237152730067E077 /* VideoListDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoListDelegate.h; sourceTree = "<group>"; };
+		B62DBEEC237152730067E077 /* VideoListDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoListDelegate.m; sourceTree = "<group>"; };
 		CEB21A488CA4AA73CF26C018 /* Pods-DYVideoCamera_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYVideoCamera_Example.release.xcconfig"; path = "Target Support Files/Pods-DYVideoCamera_Example/Pods-DYVideoCamera_Example.release.xcconfig"; sourceTree = "<group>"; };
-		FAF13700342994D85D0E408D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		FAF13700342994D85D0E408D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +87,6 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				1F91896641CF0B3D848380B7 /* Pods_DYVideoCamera_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +122,6 @@
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
 				87350A8897B725FEC48EFCF9 /* Pods_DYVideoCamera_Example.framework */,
-				1B95FD13B7EA5A5EE0D84455 /* Pods_DYVideoCamera_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -137,6 +134,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* DYViewController.h */,
 				6003F5A6195388D20070C39A /* DYViewController.m */,
+				B62DBEEB237152730067E077 /* VideoListDelegate.h */,
+				B62DBEEC237152730067E077 /* VideoListDelegate.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -180,10 +179,7 @@
 			children = (
 				3E69CCF4512FE1A956A5708F /* Pods-DYVideoCamera_Example.debug.xcconfig */,
 				CEB21A488CA4AA73CF26C018 /* Pods-DYVideoCamera_Example.release.xcconfig */,
-				7D31E250AB7E236040B35816 /* Pods-DYVideoCamera_Tests.debug.xcconfig */,
-				3DB3CCA14820612BDEE6182A /* Pods-DYVideoCamera_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -223,11 +219,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "DYVideoCamera_Tests" */;
 			buildPhases = (
-				BE5126BEC2E02BCADCA48D98 /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				18EE86F1BC7D0EEB7EA81F19 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,6 +243,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = doubleYang1020;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = NH3828744P;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -259,6 +256,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -296,30 +294,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		18EE86F1BC7D0EEB7EA81F19 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DYVideoCamera_Tests/Pods-DYVideoCamera_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Expecta/Expecta.framework",
-				"${BUILT_PRODUCTS_DIR}/Expecta+Snapshots/Expecta_Snapshots.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
-				"${BUILT_PRODUCTS_DIR}/Specta/Specta.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expecta.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expecta_Snapshots.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Specta.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DYVideoCamera_Tests/Pods-DYVideoCamera_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7427D8417315AA99DB102440 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,36 +324,20 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DYVideoCamera_Example/Pods-DYVideoCamera_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DYVideoCamera/DYVideoCamera.framework",
+				"${BUILT_PRODUCTS_DIR}/DYVideoListKit/DYVideoListKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DYVideoCamera.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DYVideoListKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DYVideoCamera_Example/Pods-DYVideoCamera_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BE5126BEC2E02BCADCA48D98 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DYVideoCamera_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -389,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62DBEED237152730067E077 /* VideoListDelegate.m in Sources */,
 				6003F59E195388D20070C39A /* DYAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* DYViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
@@ -519,6 +478,7 @@
 			baseConfigurationReference = 3E69CCF4512FE1A956A5708F /* Pods-DYVideoCamera_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NH3828744P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DYVideoCamera/DYVideoCamera-Prefix.pch";
 				INFOPLIST_FILE = "DYVideoCamera/DYVideoCamera-Info.plist";
@@ -526,6 +486,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -535,6 +496,7 @@
 			baseConfigurationReference = CEB21A488CA4AA73CF26C018 /* Pods-DYVideoCamera_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NH3828744P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DYVideoCamera/DYVideoCamera-Prefix.pch";
 				INFOPLIST_FILE = "DYVideoCamera/DYVideoCamera-Info.plist";
@@ -542,13 +504,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D31E250AB7E236040B35816 /* Pods-DYVideoCamera_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -573,7 +535,6 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DB3CCA14820612BDEE6182A /* Pods-DYVideoCamera_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
