@@ -161,16 +161,24 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DYVideoCamera/DYVideoCamera.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/DYVideoListKit/DYVideoListKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
+  install_framework "${PODS_ROOT}/PLPlayerKit/Pod/Library-Universal/PLPlayerKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/lottie-ios_Oc/lottie_ios_Oc.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DYVideoCamera/DYVideoCamera.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/DYVideoListKit/DYVideoListKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
+  install_framework "${PODS_ROOT}/PLPlayerKit/Pod/Library-Universal/PLPlayerKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/lottie-ios_Oc/lottie_ios_Oc.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

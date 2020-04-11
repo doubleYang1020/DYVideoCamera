@@ -22,7 +22,11 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		B62DBEED237152730067E077 /* VideoListDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B62DBEEC237152730067E077 /* VideoListDelegate.m */; };
+		B632E2A52440CA2100299F51 /* UIAlertController+Window.m in Sources */ = {isa = PBXBuildFile; fileRef = B632E2A42440CA2100299F51 /* UIAlertController+Window.m */; };
+		B632E2AF2440CA3900299F51 /* VideoModuleDataSourceMock.m in Sources */ = {isa = PBXBuildFile; fileRef = B632E2A72440CA3900299F51 /* VideoModuleDataSourceMock.m */; };
+		B632E2B02440CA3900299F51 /* MusicEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B632E2AA2440CA3900299F51 /* MusicEntity.m */; };
+		B632E2B12440CA3900299F51 /* MusicCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B632E2AC2440CA3900299F51 /* MusicCategory.m */; };
+		B632E2B22440CA3900299F51 /* FilterEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = B632E2AD2440CA3900299F51 /* FilterEntity.m */; };
 		C69E9635A35FD19908AF8245 /* Pods_DYVideoCamera_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87350A8897B725FEC48EFCF9 /* Pods_DYVideoCamera_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,8 +66,16 @@
 		87350A8897B725FEC48EFCF9 /* Pods_DYVideoCamera_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYVideoCamera_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC97D56C6F1EE2672A12125E /* DYVideoCamera.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DYVideoCamera.podspec; path = ../DYVideoCamera.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B62DBEEB237152730067E077 /* VideoListDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoListDelegate.h; sourceTree = "<group>"; };
-		B62DBEEC237152730067E077 /* VideoListDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoListDelegate.m; sourceTree = "<group>"; };
+		B632E2A32440CA2100299F51 /* UIAlertController+Window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Window.h"; sourceTree = "<group>"; };
+		B632E2A42440CA2100299F51 /* UIAlertController+Window.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Window.m"; sourceTree = "<group>"; };
+		B632E2A72440CA3900299F51 /* VideoModuleDataSourceMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoModuleDataSourceMock.m; sourceTree = "<group>"; };
+		B632E2A82440CA3900299F51 /* FilterEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterEntity.h; sourceTree = "<group>"; };
+		B632E2A92440CA3900299F51 /* MusicCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicCategory.h; sourceTree = "<group>"; };
+		B632E2AA2440CA3900299F51 /* MusicEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicEntity.m; sourceTree = "<group>"; };
+		B632E2AB2440CA3900299F51 /* VideoModuleDataSourceMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoModuleDataSourceMock.h; sourceTree = "<group>"; };
+		B632E2AC2440CA3900299F51 /* MusicCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicCategory.m; sourceTree = "<group>"; };
+		B632E2AD2440CA3900299F51 /* FilterEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterEntity.m; sourceTree = "<group>"; };
+		B632E2AE2440CA3900299F51 /* MusicEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicEntity.h; sourceTree = "<group>"; };
 		CEB21A488CA4AA73CF26C018 /* Pods-DYVideoCamera_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYVideoCamera_Example.release.xcconfig"; path = "Target Support Files/Pods-DYVideoCamera_Example/Pods-DYVideoCamera_Example.release.xcconfig"; sourceTree = "<group>"; };
 		FAF13700342994D85D0E408D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,15 +141,16 @@
 		6003F593195388D20070C39A /* Example for DYVideoCamera */ = {
 			isa = PBXGroup;
 			children = (
+				B632E2A32440CA2100299F51 /* UIAlertController+Window.h */,
+				B632E2A42440CA2100299F51 /* UIAlertController+Window.m */,
 				6003F59C195388D20070C39A /* DYAppDelegate.h */,
 				6003F59D195388D20070C39A /* DYAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* DYViewController.h */,
 				6003F5A6195388D20070C39A /* DYViewController.m */,
-				B62DBEEB237152730067E077 /* VideoListDelegate.h */,
-				B62DBEEC237152730067E077 /* VideoListDelegate.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
+				B632E2A62440CA3900299F51 /* Models */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = "Example for DYVideoCamera";
@@ -191,6 +204,21 @@
 				FAF13700342994D85D0E408D /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		B632E2A62440CA3900299F51 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B632E2A82440CA3900299F51 /* FilterEntity.h */,
+				B632E2AD2440CA3900299F51 /* FilterEntity.m */,
+				B632E2AE2440CA3900299F51 /* MusicEntity.h */,
+				B632E2AA2440CA3900299F51 /* MusicEntity.m */,
+				B632E2A92440CA3900299F51 /* MusicCategory.h */,
+				B632E2AC2440CA3900299F51 /* MusicCategory.m */,
+				B632E2AB2440CA3900299F51 /* VideoModuleDataSourceMock.h */,
+				B632E2A72440CA3900299F51 /* VideoModuleDataSourceMock.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,17 +351,25 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DYVideoCamera_Example/Pods-DYVideoCamera_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/DYVideoCamera/DYVideoCamera.framework",
-				"${BUILT_PRODUCTS_DIR}/DYVideoListKit/DYVideoListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${PODS_ROOT}/PLPlayerKit/Pod/Library-Universal/PLPlayerKit.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios_Oc/lottie_ios_Oc.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DYVideoCamera.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DYVideoListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PLPlayerKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/lottie_ios_Oc.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -347,9 +383,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B62DBEED237152730067E077 /* VideoListDelegate.m in Sources */,
+				B632E2B12440CA3900299F51 /* MusicCategory.m in Sources */,
 				6003F59E195388D20070C39A /* DYAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* DYViewController.m in Sources */,
+				B632E2AF2440CA3900299F51 /* VideoModuleDataSourceMock.m in Sources */,
+				B632E2B22440CA3900299F51 /* FilterEntity.m in Sources */,
+				B632E2A52440CA2100299F51 /* UIAlertController+Window.m in Sources */,
+				B632E2B02440CA3900299F51 /* MusicEntity.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +522,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DYVideoCamera/DYVideoCamera-Prefix.pch";
 				INFOPLIST_FILE = "DYVideoCamera/DYVideoCamera-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -500,6 +541,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DYVideoCamera/DYVideoCamera-Prefix.pch";
 				INFOPLIST_FILE = "DYVideoCamera/DYVideoCamera-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

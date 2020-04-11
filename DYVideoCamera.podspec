@@ -35,9 +35,18 @@ TODO: Add long description of the pod here.
   # s.resource_bundles = {
   #   'DYVideoCamera' => ['DYVideoCamera/Assets/*.png']
   # }
+  s.resources = 'DYVideoCamera/*.xcassets'
+  s.ios.xcconfig = {
+#      'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/../../Frameworks"',
+      'OTHER_LDFLAGS' => '-ObjC'
+  }
 
-  s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+#  s.public_header_files = 'Pod/Classes/**/*.h'
+  s.frameworks = 'UIKit', 'Photos', 'AVFoundation', 'AssetsLibrary'
+  s.ios.vendored_frameworks = 'Frameworks/KSYHTTPCache.framework'
   s.dependency 'Masonry'
   s.dependency 'GPUImage'
+  s.dependency 'lottie-ios_Oc'
+  s.dependency 'CocoaLumberjack'
+  s.dependency 'CocoaAsyncSocket'
 end

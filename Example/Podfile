@@ -3,8 +3,8 @@ use_frameworks!
 platform :ios, '9.0'
 
 target 'DYVideoCamera_Example' do
+  pod 'MBProgressHUD'
   pod 'DYVideoCamera', :path => '../'
-# TODO： 滑动播放组建
-  pod 'DYVideoListKit'
   pod 'GPUImage', :git => 'https://github.com/doubleYang1020/GPUImage'
+  pod "PLPlayerKit", :podspec => 'https://raw.githubusercontent.com/pili-engineering/PLPlayerKit/master/PLPlayerKit-Universal.podspec'
 end

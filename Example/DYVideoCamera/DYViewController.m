@@ -7,12 +7,10 @@
 //
 
 #import "DYViewController.h"
-
-#import "VideoListDelegate.h"
-#import "DYVideoListKit.h"
-#import "DYSingleObject.h"
+#import "DYVideoModule.h"
+#import "VideoModuleDataSourceMock.h"
 @interface DYViewController ()
-@property (strong, nonatomic) id<DYVideoListDelegate> videoModuleDataSource;
+@property (strong, nonatomic) VideoModuleDataSourceMock* videoModuleDataSource;
 @end
 
 @implementation DYViewController
@@ -20,11 +18,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.videoModuleDataSource = [[VideoModuleDataSourceMock alloc] init];
+//    [self buttonAction:NULL];
 
-    self.videoModuleDataSource = [[VideoListDelegate alloc] init];
-    [DYSingleObject sharedInstance].videoModelDataSource = self.videoModuleDataSource;
-    [DYVideoListKit showClassName];
 
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
+
+- (IBAction)buttonAction:(id)sender {
+    
+    DYVideoRecoderViewController *vc = [[DYVideoRecoderViewController alloc] init];
+    [vc setVideoModelDataSource:self.videoModuleDataSource];
+    DYVideoNavViewController* nav = [[DYVideoNavViewController alloc] initWithRootViewController:vc];
+    self.videoModuleDataSource.holder = nav;
+    [self presentViewController:nav animated:true completion:^{
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning

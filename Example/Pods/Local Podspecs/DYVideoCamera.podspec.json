@@ -19,12 +19,33 @@
     "ios": "9.0"
   },
   "source_files": "DYVideoCamera/Classes/**/*",
-  "public_header_files": "Pod/Classes/**/*.h",
+  "resources": "DYVideoCamera/*.xcassets",
+  "ios": {
+    "xcconfig": {
+      "OTHER_LDFLAGS": "-ObjC"
+    },
+    "vendored_frameworks": "Frameworks/KSYHTTPCache.framework"
+  },
+  "frameworks": [
+    "UIKit",
+    "Photos",
+    "AVFoundation",
+    "AssetsLibrary"
+  ],
   "dependencies": {
     "Masonry": [
 
     ],
     "GPUImage": [
+
+    ],
+    "lottie-ios_Oc": [
+
+    ],
+    "CocoaLumberjack": [
+
+    ],
+    "CocoaAsyncSocket": [
 
     ]
   }
