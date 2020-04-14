@@ -39,6 +39,7 @@ typedef void (^DYProgressCallback)(float);
                              actions:(NSArray<UIAlertAction *> * _Nullable)actions;
 
 + (NSNumber * _Nonnull)bitRate;
++ (DYCameraEngineBeautyPreset)beautyPreset;
 + (DYCameraEngineSessionPreset) sessionPreset;
 + (CMTimeRange)videoTimeRange;
 

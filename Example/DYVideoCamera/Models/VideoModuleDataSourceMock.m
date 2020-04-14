@@ -226,6 +226,11 @@
 + (NSNumber * _Nonnull)bitRate {
     return @2500000;
 }
+
++ (DYCameraEngineBeautyPreset)beautyPreset{
+    return BeautyFaceLowQuality;
+}
+
 +(DYCameraEngineSessionPreset)sessionPreset{
     return CameraEngineSessionPreset960x540;
 }

@@ -20,6 +20,12 @@ typedef NS_ENUM(NSInteger, DYCameraEngineSessionPreset) {
     CameraEngineSessionPreset540x540,//暂不支持
     CameraEngineSessionPreset720x720,//暂不支持
 };
+
+typedef NS_ENUM(NSInteger, DYCameraEngineBeautyPreset) {
+    BeautyFaceLowQuality,
+    BeautyFaceMediumQuality,
+    BeautyFaceHighestQuality,
+};
 @interface DYCameraEngine : NSObject
 
 @property (nonatomic , assign) BOOL isRecoding;
@@ -63,7 +69,7 @@ typedef NS_ENUM(NSInteger, DYCameraEngineSessionPreset) {
 /**
  美颜开关
  */
-- (void)changeBeautyFace;
+- (void)changeBeautyFace:(DYCameraEngineBeautyPreset)beautyPreset;
 
 /**
  美颜程度低
