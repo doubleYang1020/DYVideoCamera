@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DYVideoCamera'
-  s.version          = '1.1.1'
+  s.version          = '3.1.0'
   s.summary          = 'A iOS Camera FrameWork.'
 
 # This description is used to generate tags and improve search results.
@@ -55,5 +55,5 @@ TODO: Add long description of the pod here.
   s.dependency 'lottie-ios_Oc'
   s.dependency 'CocoaLumberjack'
   s.dependency 'CocoaAsyncSocket'
-  s.dependency 'MNNFaceDetection'
+#  s.dependency 'MNNFaceDetection'
 end
