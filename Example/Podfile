@@ -1,4 +1,3 @@
-use_frameworks!
 
 platform :ios, '9.0'
 
@@ -7,4 +6,15 @@ target 'DYVideoCamera_Example' do
   pod 'DYVideoCamera', :path => '../'
   pod 'GPUImage', :git => 'https://github.com/doubleYang1020/GPUImage'
   pod "PLPlayerKit", :podspec => 'https://raw.githubusercontent.com/pili-engineering/PLPlayerKit/master/PLPlayerKit-Universal.podspec'
+end
+
+post_install do |installer|
+  
+  installer.pods_project.targets.each do |target|
+    if target.name == "Masonry"
+      target.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '8.0'
+      end
+    end
+  end
 end

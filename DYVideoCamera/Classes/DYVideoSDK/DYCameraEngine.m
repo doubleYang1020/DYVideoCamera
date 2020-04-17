@@ -169,7 +169,7 @@
     }
 }
 
-- (void) changeBeautyFace{
+- (void)changeBeautyFace:(DYCameraEngineBeautyPreset)beautyPreset{
     if ([_filter isKindOfClass:[GPUImageBeautifyFilter class]]) {
         [_videoCamera removeAllTargets];
         _filter = [[DYGPUImageEmptyFilter alloc] init];
@@ -180,6 +180,21 @@
         _filter = [[GPUImageBeautifyFilter alloc] init];
         [_videoCamera addTarget:_filter];
         [_filter addTarget:_cameraPreview];
+        
+        switch (beautyPreset) {
+            case BeautyFaceLowQuality:
+                [self changeBeautyFaceLowQuality];
+                break;
+            case BeautyFaceMediumQuality:
+                [self changeBeautyFaceMediumQuality];
+                break;
+            case BeautyFaceHighestQuality:
+                [self changeBeautyFaceHighestQuality];
+                break;
+            
+            default:
+                break;
+        }
     }
     
 }

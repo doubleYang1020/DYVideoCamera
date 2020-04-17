@@ -33,7 +33,8 @@
 }
 
 + (UIImage * _Nullable)imageNamed:(NSString * _Nonnull)name {
-    NSBundle *bundle = [NSBundle bundleForClass:self.class];
+    NSBundle *mainBundle = [NSBundle bundleForClass:self.class];
+    NSBundle *bundle = [NSBundle bundleWithPath:[mainBundle pathForResource:@"DYVideoCameraMedia" ofType:@"bundle"]];
     UIImage *image = [UIImage imageNamed:name inBundle:bundle compatibleWithTraitCollection:nil];
     return image;
 }

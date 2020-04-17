@@ -342,10 +342,7 @@
 
 - (void)retouchButtonAction {
     [_retouchButton setSelected:![_retouchButton isSelected]];
-    [_cameraEngine changeBeautyFace];
-    if ([_retouchButton isSelected]) {
-        [_cameraEngine changeBeautyFaceMediumQuality];
-    }
+    [_cameraEngine changeBeautyFace:[[self.videoModelDataSource class] beautyPreset]];
 }
 
 - (void)changeCameraButtonAction {
