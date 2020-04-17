@@ -103,7 +103,8 @@ typedef void(^clickPlayOrSuspendedBtnBlock)(void);
     [_gradientLayer addSublayer:_lineLayer];
     
 //    _LodinglottieView = [LOTAnimationView animationNamed:@"music_loading"];
-    NSBundle *bundle = [NSBundle bundleForClass:self.class];
+    NSBundle *mainBundle = [NSBundle bundleForClass:self.class];
+    NSBundle *bundle = [NSBundle bundleWithPath:[mainBundle pathForResource:@"DYVideoCameraMedia" ofType:@"bundle"]];
     _LodinglottieView = [LOTAnimationView animationNamed:@"music_loading" inBundle:bundle];
     [self.contentView addSubview:_LodinglottieView];
     [_LodinglottieView mas_makeConstraints:^(MASConstraintMaker *make) {

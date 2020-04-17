@@ -32,10 +32,16 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'DYVideoCamera/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'DYVideoCamera' => ['DYVideoCamera/Assets/*.png']
-  # }
-  s.resources = 'DYVideoCamera/*.xcassets'
+#   s.resource_bundles = {
+#     'DYVideoCamera' => ['DYVideoCamera/Assets/*']
+#   }
+#  s.resources = 'DYVideoCamera/*.xcassets'
+  
+#  官方推荐使用 resource_bundles ,因为用 key-value 可以避免相同名称资源的名称冲突。
+#
+#  建议 bundle 的名称至少包括 pod 库的名称，避免同名冲突。
+#  使用 resource 来指定资源，被指定的资源只会简单的被 copy 到目标工程中。官方认为用 resources 无法避免同名文件资源冲突，同时 Xcode 也不会对这些资源做优化。
+  s.resource_bundles = {     'DYVideoCameraMedia' => ['DYVideoCamera/*.xcassets']  }
   s.ios.xcconfig = {
 #      'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/../../Frameworks"',
       'OTHER_LDFLAGS' => '-ObjC'
@@ -48,5 +54,6 @@ TODO: Add long description of the pod here.
   s.dependency 'GPUImage'
   s.dependency 'lottie-ios_Oc'
   s.dependency 'CocoaLumberjack'
+  s.dependency 'CocoaAsyncSocket'
   s.dependency 'CocoaAsyncSocket'
 end
