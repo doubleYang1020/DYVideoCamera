@@ -1,0 +1,1 @@
+../../../../../DYVideoCamera/Classes/DYVideoSDK/DYSDKFilterResources/GPUImageBeautifyFilter.h
