@@ -95,13 +95,6 @@
     NSDictionary* options = @{AVURLAssetPreferPreciseDurationAndTimingKey:@YES};
     
     AVAsset* asset = [AVURLAsset URLAssetWithURL:videoInputURL options:options];
-    AVAssetTrack *assetAudioTrack = [[asset tracksWithMediaType:AVMediaTypeAudio] firstObject];
-    NSError *erroraudio = nil;
-    BOOL ba = [audioTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, asset.duration)
-                                  ofTrack:assetAudioTrack
-                                   atTime:kCMTimeZero
-                                    error:&erroraudio];
-    Log(@"erroraudio:%@%d",erroraudio,ba);
     
     AVAssetTrack* assetVideoTrack = [[asset tracksWithMediaType:AVMediaTypeVideo] firstObject];
     NSError *errorVideo = nil;
@@ -112,17 +105,56 @@
     videoTrack.preferredTransform = assetVideoTrack.preferredTransform;
     Log(@"errorVideo:%@%d",errorVideo,bl);
     
+    AVAssetTrack *assetAudioTrack = [[asset tracksWithMediaType:AVMediaTypeAudio] firstObject];
+    NSError *erroraudio = nil;
+    BOOL ba = [audioTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, assetVideoTrack.asset.duration)
+                                  ofTrack:assetAudioTrack
+                                   atTime:kCMTimeZero
+                                    error:&erroraudio];
+    Log(@"erroraudio:%@%d",erroraudio,ba);
+    
     AVMutableAudioMixInputParameters* videomixParameters = [AVMutableAudioMixInputParameters audioMixInputParametersWithTrack:audioTrack];
     [videomixParameters setVolume:originalVolum atTime:kCMTimeZero];
     
     AVAsset* musicAsset = [AVURLAsset URLAssetWithURL:musicInputURL options:options];
     AVAssetTrack* assetMusicTrack = [[musicAsset tracksWithMediaType:AVMediaTypeAudio] firstObject];
     NSError *errorMusic = nil;
-    BOOL bm = [musicTrack insertTimeRange:CMTimeRangeMake(musicStartTime, asset.duration)
-                                  ofTrack:assetMusicTrack
-                                   atTime:kCMTimeZero
-                                    error:&errorMusic];
-    Log(@"erroraudio:%@%d",erroraudio,bm);
+    
+    // TODO:
+    //判断音乐时长 是否符合视频长度CMTimeMinimum(musicAsset.duration,asset.duration)
+    Log(@"asset.duration%lf",CMTimeGetSeconds(assetVideoTrack.asset.duration));
+    Log(@"musicAsset.duration%lf",CMTimeGetSeconds(musicAsset.duration));
+    Log(@"CMTimeMinimum%lf",CMTimeGetSeconds(CMTimeMinimum(musicAsset.duration,assetVideoTrack.asset.duration)));
+    
+    if (CMTimeCompare(musicAsset.duration, assetVideoTrack.asset.duration) == -1) {
+        // music 长度小于视频原音频长度
+        int timeIndex = 1;
+        while ( CMTimeCompare(CMTimeMultiply(musicAsset.duration, timeIndex), assetVideoTrack.asset.duration) == -1) {
+            BOOL bm = [musicTrack insertTimeRange:CMTimeRangeMake(musicStartTime,musicAsset.duration)
+                                          ofTrack:assetMusicTrack
+                                           atTime:CMTimeMultiply(musicAsset.duration, (timeIndex - 1))
+                                            error:&errorMusic];
+            Log(@"errorMusic:%@%d",errorMusic,bm);
+            timeIndex += 1;
+        }
+        
+        ;
+        BOOL bm = [musicTrack insertTimeRange:CMTimeRangeMake(musicStartTime,CMTimeSubtract(assetVideoTrack.asset.duration, CMTimeMultiply(musicAsset.duration, (timeIndex - 1))))
+                                      ofTrack:assetMusicTrack
+                                       atTime:CMTimeMultiply(musicAsset.duration, (timeIndex - 1))
+                                        error:&errorMusic];
+        Log(@"errorMusic:%@%d",errorMusic,bm);
+        
+        
+    }else{
+        BOOL bm = [musicTrack insertTimeRange:CMTimeRangeMake(musicStartTime, assetVideoTrack.asset.duration)
+                                      ofTrack:assetMusicTrack
+                                       atTime:kCMTimeZero
+                                        error:&errorMusic];
+        Log(@"errorMusic:%@%d",errorMusic,bm);
+    }
+    
+
     
     AVMutableAudioMixInputParameters* musicMixParameters = [AVMutableAudioMixInputParameters audioMixInputParametersWithTrack:musicTrack];
     [musicMixParameters setVolume:musicVolum atTime:kCMTimeZero];

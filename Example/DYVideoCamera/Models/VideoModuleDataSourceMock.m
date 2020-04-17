@@ -13,6 +13,9 @@
 #import "MusicEntity.h"
 #import "FilterEntity.h"
 #import <PLPlayerKit/PLPlayerKit.h>
+ #import <MediaPlayer/MediaPlayer.h>
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 
 @implementation VideoModuleDataSourceMock
@@ -239,7 +242,14 @@
 - (void)readyWithCover:(UIImage * _Nonnull)cover videoUrl:(NSURL * _Nonnull)videoUrl {
     NSLog(@"readyWithCover: image -> %@ \t videoUrl -> %@", cover, videoUrl);
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.holder dismissViewControllerAnimated:YES completion:nil];
+        [self.holder dismissViewControllerAnimated:YES completion:^{
+
+            AVPlayerViewController *aVPlayerViewController = [[AVPlayerViewController alloc]init];
+            aVPlayerViewController.player = [[AVPlayer alloc]initWithURL:videoUrl];
+            [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:aVPlayerViewController animated:YES completion:^{
+                nil;
+            }];
+        }];
     });
 }
 
