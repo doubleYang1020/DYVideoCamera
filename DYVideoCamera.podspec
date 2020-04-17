@@ -55,5 +55,5 @@ TODO: Add long description of the pod here.
   s.dependency 'lottie-ios_Oc'
   s.dependency 'CocoaLumberjack'
   s.dependency 'CocoaAsyncSocket'
-  s.dependency 'CocoaAsyncSocket'
+  s.dependency 'MNNFaceDetection'
 end
